@@ -3,9 +3,14 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  val= 0
+  for i in 0...arr.length
+      val= val+ arr.at(i)
+  end
+  puts val
+return val
 end
-
+sum [1,1,1]
 def max_2_sum arr
   # YOUR CODE HERE
 end
@@ -30,6 +35,6 @@ end
 
 # Part 3
 
-class BookInStock
-# YOUR CODE HERE
-end
+#class BookInStock
+## YOUR CODE HERE
+#end
