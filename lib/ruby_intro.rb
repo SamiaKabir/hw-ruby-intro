@@ -11,8 +11,21 @@ def sum arr
 return val
 end
 sum [1,1,1]
+
 def max_2_sum arr
-  # YOUR CODE HERE
+    val=0
+    if arr.length>=2
+        arr.sort!
+        for i in arr.length-2...arr.length
+            val= val+ arr.at(i)
+        end
+        elsif arr.length==1
+        val= arr.at(0)
+        else
+        val=0
+    end
+    puts val
+    return val
 end
 
 def sum_to_n? arr, n
