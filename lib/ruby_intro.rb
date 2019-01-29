@@ -29,7 +29,22 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+    val=false
+    summation=0
+    
+    for i in 0...arr.length
+        for j in 0...arr.length
+            if j!=i
+                summation= arr.at(i)+arr.at(j)
+                if summation==n
+                    val=true
+                    break
+                end
+            end
+        end
+    end
+    puts val
+    return val
 end
 
 # Part 2
