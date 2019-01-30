@@ -56,7 +56,18 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+    val=false
+    # !("AEIOUaeiou".include?(s[0]))
+    if s.length==0
+        val=false
+        elsif (s[0] =~ /[^a-zA-Z0-9]/)
+        val=false
+        elsif  !( s[0] =~ /[aeiouAEIOU]/)
+        val=true
+        else
+        val=false
+    end
+    return val
 end
 
 def binary_multiple_of_4? s
