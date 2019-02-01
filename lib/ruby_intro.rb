@@ -70,8 +70,22 @@ def starts_with_consonant? s
     return val
 end
 
+
+
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+    if s.length==0
+        val=false
+        elsif (s=~ /[^01]/)
+        return false
+        else
+        val=s.to_i(2)
+        puts val
+        if val%4==0
+            return true
+            else
+            return false
+        end
+    end
 end
 
 # Part 3
