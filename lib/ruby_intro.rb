@@ -88,8 +88,20 @@ def binary_multiple_of_4? s
     end
 end
 
-# Part 3
-
-#class BookInStock
-## YOUR CODE HERE
-#end
+class BookInStock
+    # constructor
+    def initialize(isbn,price)
+        if isbn.length==0 or price<=0
+            raise ArgumentError.new("Arguments are not in correct form")
+        end
+        @isbn=isbn
+        @price=price
+    end
+    
+    def price_as_string
+        price_str=@price.to_s(10)
+        new_price_str= '$'+ price_str
+        # puts new_price_str
+    end
+    
+end
