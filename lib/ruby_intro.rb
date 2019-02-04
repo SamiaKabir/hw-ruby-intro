@@ -3,14 +3,14 @@
 # Part 1
 
 def sum arr
-  val= 0
-  for i in 0...arr.length
-      val= val+ arr.at(i)
-  end
-  puts val
-return val
+    val= 0
+    for i in 0...arr.length
+        val= val+ arr.at(i)
+    end
+    puts val
+    return val
 end
-sum [1,1,1]
+
 
 def max_2_sum arr
     val=0
@@ -27,6 +27,8 @@ def max_2_sum arr
     puts val
     return val
 end
+
+
 
 def sum_to_n? arr, n
     val=false
@@ -47,6 +49,8 @@ def sum_to_n? arr, n
     return val
 end
 
+
+
 # Part 2
 
 def hello(name)
@@ -54,6 +58,7 @@ def hello(name)
     puts str+ ', '+ name
     return str+', '+name
 end
+
 
 def starts_with_consonant? s
     val=false
@@ -88,6 +93,10 @@ def binary_multiple_of_4? s
     end
 end
 
+
+
+# Part 3
+
 class BookInStock
     # constructor
     def initialize(isbn,price)
@@ -98,10 +107,29 @@ class BookInStock
         @price=price
     end
     
+    def isbn     #getter method
+        @isbn
+    end
+    
+    def isbn=(isbn) #setter method
+        @isbn = isbn
+    end
+    
+    
+    def price #getter method
+        @price
+    end
+    
+    def price=(price) #setter method
+        @price = price
+    end
+    
     def price_as_string
-        price_str=@price.to_s(10)
+        @price= '%.2f' % @price
+        price_str= @price.to_s
         new_price_str= '$'+ price_str
-        # puts new_price_str
     end
     
 end
+
+
